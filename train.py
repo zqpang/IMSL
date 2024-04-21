@@ -526,5 +526,5 @@ if __name__ == '__main__':
                         default=data_dir)
     parser.add_argument('--logs-dir', type=str, metavar='PATH',
                         default=osp.join(working_dir, 'logs'))
-    parser.add_argument("--cuda", type=str, default="2,3", help="cuda")
+    parser.add_argument("--cuda", type=str, default="0,1,2,3", help="cuda")
     main()
