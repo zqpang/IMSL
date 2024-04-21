@@ -14,3 +14,8 @@ cd IMSL
 
 ## Data preparation
 Please modify the "data_dir" in the train.py file.
+
+## Training
+```python
+python train.py
+```
