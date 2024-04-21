@@ -158,27 +158,6 @@ def create_model(args):
     model = nn.DataParallel(model)
     return model
 
-def evaluate_mean(evaluator1, dataset, test_loaders):
-    maxap = 0
-    maxcmc = 0
-    mAP_sum = 0
-    cmc_sum = 0
-    cmc_sum_10 = 0
-
-    for i in range(len(dataset)):
-        cmc_scores, mAP = evaluator1.evaluate(test_loaders[i], dataset[i].query, dataset[i].gallery, cmc_flag=False)
-        maxap = max(mAP, maxap)
-        maxcmc = max(cmc_scores[0], maxcmc)
-        mAP_sum += mAP
-        cmc_sum += cmc_scores[0]
-        cmc_sum_10 += cmc_scores[9]
-
-    mAP = (mAP_sum) / len(test_loaders)
-    cmc_now = (cmc_sum) / len(test_loaders)
-    cmc_now_10 = cmc_sum_10 / (len(test_loaders))
-
-    return mAP, cmc_now, cmc_now_10
-
 def cluster_finement_new(index2label, pseudo_labels, rerank_dist, pseudo_labels_tight):
     rerank_dist_tensor = torch.tensor(rerank_dist)
     N = pseudo_labels.size(0)
