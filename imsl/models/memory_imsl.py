@@ -52,12 +52,12 @@ class HybridMemory(nn.Module):
         
         if back == 1:
             self.unique_cameras = torch.unique(self.all_img_cams)
-            pseudo_y = self.all_pseudo_label[targets].to(torch.device('cuda'))  # targets: image index in the train set
+            pseudo_y = self.all_pseudo_label[targets].to(torch.device('cuda'))
             proxy_targets = self.all_proxy_label[targets].to(torch.device('cuda'))
             loss = torch.tensor(0.).to(torch.device('cuda'))
             
             score = ExemplarMemory.apply(features, proxy_targets, self.global_memory, torch.tensor(self.momentum).to(torch.device('cuda')))
-            inputs = score / self.temp  # similarity score before softmax
+            inputs = score / 0.10
             
             offline_loss, online_loss = 0, 0
             for cc in torch.unique(cams):
