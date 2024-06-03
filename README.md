@@ -13,7 +13,7 @@ cd IMSL
 ```
 
 ## Paper
-```python
+```
 @article{pang2024Inter,
   title={Inter-Modality Similarity Learning for Unsupervised Multi-Modality Person Re-Identification,
   author={Pang, Zhiqi and Zhao, Lingling and Liu, Yang and Sharma, Gaurav and Wang, Chunyu},
