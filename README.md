@@ -1,5 +1,5 @@
 # IMSL
-A PyTorch implementation for IMSL
+A basic implementation for IMSL
 ## Environment
 Python >= 3.6
 
@@ -12,10 +12,7 @@ git clone https://github.com/zqpang/IMSL
 cd IMSL
 ```
 
-## Data preparation
-Please modify the "data_dir" in the train.py file.
-
-## Training
+## DOI
 ```python
-python train.py
+10.1109/TCSVT.2024.3408831
 ```
