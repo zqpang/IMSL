@@ -12,7 +12,13 @@ git clone https://github.com/zqpang/IMSL
 cd IMSL
 ```
 
-## DOI
+## Paper
 ```python
-10.1109/TCSVT.2024.3408831
+@article{pang2024Inter,
+  title={Inter-Modality Similarity Learning for Unsupervised Multi-Modality Person Re-Identification,
+  author={Pang, Zhiqi and Zhao, Lingling and Liu, Yang and Sharma, Gaurav and Wang, Chunyu},
+  journal={IEEE Transactions on Circuits and Systems for Video Technology},
+  year={2024},
+  publisher={IEEE}
+}
 ```
